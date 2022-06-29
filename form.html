@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body{
+      padding-left: 10px;
+    }
+    input[type=text], select, textarea{
+  width: 40%;
+  padding: 42px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+    input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 80%;
+  background-color: #236ab2;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #259fcf;
+}
+.h2{
+  font-family: monospace;
+}
+
+  </style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <form name="myForm" method="GET" action="index.html" onsubmit="return validateForm()">
+    <h1>Blog Heading</h1>
+    <input type="text" id="my_mainblog" name="my_mainblog" />
+    <h1>Heading</h1>
+    <input type="text" id="my_text" name="my_text" />
+     
+    <h2>Paragraphs</h2>
+    <textarea id="my_para" name="my_para" placeholder="Enter your Paragraph's content.." ></textarea>
+    <!-- <input type="text" id="my_para" name="my_para" />  -->
+    <h1>Heading 1</h1>
+    <input type="text" id="my_head1" name="my_head1" />
+    <h2>Paragraphs 1</h2>
+    <!-- <input type="text" id="my_para1" name="my_para1" /> -->
+    <textarea id="my_para1" name="my_para1" placeholder="Enter your Paragraph's content.." ></textarea>
+    <h1>Headings2</h1>
+    <input type="text" id="my_head2" name="my_head2" />
+    <h2>Paragraphs2</h2>
+    <!-- <input type="text" id="my_para2" name="my_para2" /> -->
+    <textarea id="my_para2" name="my_para2" placeholder="Enter your Paragraph's content.." ></textarea>
+    <h1>Heading</h1>
+    <input type="text" id="my_head3" name="my_head3" />
+    <h2>Paragraphs</h2>
+    <textarea id="my_para3" name="my_para3" placeholder="Enter your Paragraph's content.." ></textarea>
+    <h1>New features</h1>
+    <!-- <input type="text" id="my_feat" name="my_feat" /> -->
+    <textarea id="my_feat" name="my_feat" placeholder="Enter your New Feature's here.." ></textarea>
+   <div>
+    <center><input type="submit" /></center>
+  </div>
+
+  </form>
+</body>
+<script type="text/javascript">
+  function validateForm() {
+    let x = document.forms["myForm"]["my_text"].value;
+    if (x == "") {
+      alert("Heading must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_head1"].value;
+    if (b == "") {
+      alert("Heading must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_para1"].value;
+    if (b == "") {
+      alert("Paragraphs must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_head2"].value;
+    if (b == "") {
+      alert("Heading must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_para2"].value;
+    if (b == "") {
+      alert("Paragraphs must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_head3"].value;
+    if (b == "") {
+      alert("Heading must be filled out");
+      return false;
+    }
+    let b = document.forms["myForm"]["my_para3"].value;
+    if (b == "") {
+      alert("Paragraphs must be filled out");
+      return false;
+    }
+  }
+</script>
+
+</html>
